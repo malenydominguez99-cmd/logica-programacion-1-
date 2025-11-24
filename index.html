@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PL-1</title>
+</head>
+<body>
+
+<script>
+
+    let num1 = Number(prompt("Ingresa el primer número:"));
+    let num2 = Number(prompt("Ingresa el segundo número:"));
+    let num3 = Number(prompt("Ingresa el tercer número:"));
+
+    if (num1 === num2 && num2 === num3) {
+        console.log("Los números son iguales:", num1, num2, num3);
+        document.write(`Los números son iguales: ${num1}, ${num2}, ${num3}<br>`);
+    } else {
+        let numeros = [num1, num2, num3];
+
+        let deMayorAMenor = [...numeros].sort((a, b) => b - a);
+        console.log("De mayor a menor:", deMayorAMenor);
+        document.write(`De mayor a menor: ${deMayorAMenor.join(", ")}<br>`);
+
+        let deMenorAMayor = [...numeros].sort((a, b) => a - b);
+        console.log("De menor a mayor:", deMenorAMayor);
+        document.write(`De menor a mayor: ${deMenorAMayor.join(", ")}<br>`);
+
+        let mayor = deMayorAMenor[0];
+        let centro = deMayorAMenor[1];
+        let menor = deMayorAMenor[2];
+
+        console.log(`Mayor: ${mayor}, Centro: ${centro}, Menor: ${menor}`);
+        document.write(`Mayor: ${mayor}, Centro: ${centro}, Menor: ${menor}<br>`);
+    }
+</script>
+
+</body>
+</html>
+
